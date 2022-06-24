@@ -35,8 +35,8 @@ public class RepositoryServiceTest {
         // 部署流程 获取RepositoryService对象
         RepositoryService repositoryService = processEngine.getRepositoryService();
         Deployment deployment = repositoryService.createDeployment()// 创建Deployment对象
-                .addClasspathResource("holiday-request.bpmn20.xml") // 添加流程部署文件
-                .name("请假流程") // 设置部署流程的名称
+                .addClasspathResource("并行回退.bpmn20.xml") // 添加流程部署文件
+                .name("并行回退流程") // 设置部署流程的名称
                 .deploy(); // 执行部署操作
         System.out.println("deployment.getId() = " + deployment.getId());
         System.out.println("deployment.getName() = " + deployment.getName());
