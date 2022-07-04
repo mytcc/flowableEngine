@@ -42,7 +42,7 @@
         <sequenceFlow sourceRef="holidayApprovedTask" targetRef="approveEnd"/>
 
         <serviceTask id="sendRejectionMail" name="Send out rejection email"
-                     flowable:class="org.flowable.SendRejectionMail"/>
+                     flowable:class="ruoli.work.listener.TaskCompleteListener"/>
         <sequenceFlow sourceRef="sendRejectionMail" targetRef="rejectEnd"/>
 
         <endEvent id="approveEnd"/>

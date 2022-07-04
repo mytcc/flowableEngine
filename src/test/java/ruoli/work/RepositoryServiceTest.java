@@ -35,8 +35,8 @@ public class RepositoryServiceTest {
         // 部署流程 获取RepositoryService对象
         RepositoryService repositoryService = processEngine.getRepositoryService();
         Deployment deployment = repositoryService.createDeployment()// 创建Deployment对象
-                .addClasspathResource("并行回退.bpmn20.xml") // 添加流程部署文件
-                .name("并行回退流程") // 设置部署流程的名称
+                .addClasspathResource("简单流程.bpmn20.xml") // 添加流程部署文件
+                .name("简单流程") // 设置部署流程的名称
                 .deploy(); // 执行部署操作
         System.out.println("deployment.getId() = " + deployment.getId());
         System.out.println("deployment.getName() = " + deployment.getName());
@@ -76,7 +76,14 @@ public class RepositoryServiceTest {
         // 设置为TRUE 级联删除流程定义，及时流程有实例启动，也可以删除，设置为false 非级联删除操作。
         //repositoryService.deleteDeployment("2501",true);
 
+        //processEngine.getDynamicBpmnService().
+
     }
+
+    /**
+     * 获取指定节点 下一个节点的状态
+     */
+
 
 
 }
